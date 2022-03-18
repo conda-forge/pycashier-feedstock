@@ -1,5 +1,5 @@
 {% set name = "pycashier" %}
-{% set version = "0.2.8" %}
+{% set version = "0.3.0" %}
 
 
 package:
@@ -8,13 +8,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pycashier-{{ version }}.tar.gz
-  sha256: b8daccd3fb85301ecb5ea63e97649f35208303fceaf95b4c91b21290bd1c1ed7
+  sha256: 9ad285d6c07d8ccb22bd87adc790956dc68352fb03bbfb2e6cac824f58f8df1f
 
 build:
   number: 0
   noarch: python
   entry_points:
-    - pycashier = pycashier.pycashier:main
+    - pycashier = pycashier.cli:cli
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -24,7 +24,9 @@ requirements:
     - poetry
   run:
     - python >=3.6,<3.10
-    - rich >=10.12.0,<11.0.0
+    - rich >=12.0.0
+    - rich-click >=1.2.1, <2.0.0
+    - ruamel.yaml >=0.17.21
 
 test:
   imports:
@@ -37,7 +39,7 @@ test:
 
 about:
   home: https://github.com/brocklab/pycashier/
-  summary: cash in on expressed barcode tags
+  summary: cash in on DNA barcode tags
   license: MIT
   license_file: LICENSE
 
