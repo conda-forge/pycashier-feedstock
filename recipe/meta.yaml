@@ -26,7 +26,7 @@ requirements:
     - python >=3.6,<3.10
     - rich >=12.0.0
     - rich-click >=1.2.1, <2.0.0
-    - ruamel.yaml >=0.17.21
+    - tomlkit >=0.10.1
 
 test:
   imports:
