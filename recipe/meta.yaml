@@ -1,5 +1,5 @@
 {% set name = "pycashier" %}
-{% set version = "22.6.1" %}
+{% set version = "22.6.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pycashier-{{ version }}.tar.gz
-  sha256: 5dd0bae92a32aaf2a87ccf163b58c112d10ac64e609802dcf9889d9e09f272e0
+  sha256: 955a3be5dda9da8fd3487736cab83f2e660b35bc4f6ddc294d1672beab0d91c0
 
 build:
   number: 0
