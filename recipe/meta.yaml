@@ -21,7 +21,7 @@ requirements:
   host:
     - pip
     - python >=3.6,<3.10
-    - pdm
+    - pdm-pep517 >=0.3.0
   run:
     - python >=3.6,<3.10
     - rich >=12.0.0
