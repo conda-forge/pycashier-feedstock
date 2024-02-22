@@ -28,6 +28,7 @@ requirements:
     - click-rich-help >=22.1.0
     - click >=8.1.0
     - tomlkit >=0.10.1
+    - polars >=0.20.4
 
 test:
   imports:
