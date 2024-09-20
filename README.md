@@ -145,6 +145,3 @@ Feedstock Maintainers
 
 * [@daylinmorgan](https://github.com/daylinmorgan/)
 
-
-<!-- dummy commit to enable rerendering -->
-
