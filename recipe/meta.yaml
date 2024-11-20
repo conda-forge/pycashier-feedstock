@@ -40,6 +40,7 @@ test:
     - pip
 
 about:
+  home: https://github.com/brocklab/pycashier/
   summary: cash in on expressed barcode tags
   license: MIT
   license_file: LICENSE
