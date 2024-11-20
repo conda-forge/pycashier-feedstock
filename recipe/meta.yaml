@@ -1,34 +1,34 @@
 {% set name = "pycashier" %}
 {% set version = "2024.1007" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pycashier-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pycashier-{{ version }}.tar.gz
   sha256: 67c0353801aea6fcf47772df885cc1bfa3197f5bab2bd0d7d01867b6d5f7cfec
 
 build:
-  number: 0
-  noarch: python
   entry_points:
-    - pycashier = pycashier.cli:cli
-  script: {{ PYTHON }} -m pip install . -vv
+    - pycashier = pycashier.cli:main
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
+    - python >=3.9
+    - setuptools >=64
+    - setuptools-scm >=8
     - pip
-    - python >=3.9,<3.13
-    - pdm-backend
   run:
-    - python >=3.9,<3.13
+    - python >=3.9
     - rich >=12.0.0
+    - tomlkit >=0.10.1
     - click-rich-help >=22.1.0
     - click >=8.1.0
-    - tomlkit >=0.10.1
-    - polars >=0.20.4
+    - polars >=1.10.0
 
 test:
   imports:
@@ -40,8 +40,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/brocklab/pycashier/
-  summary: cash in on DNA barcode tags
+  summary: cash in on expressed barcode tags
   license: MIT
   license_file: LICENSE
 
