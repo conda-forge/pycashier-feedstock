@@ -7,7 +7,7 @@ Home: https://github.com/brocklab/pycashier/
 
 Package license: MIT
 
-Summary: cash in on DNA barcode tags
+Summary: cash in on expressed barcode tags
 
 Current build status
 ====================
